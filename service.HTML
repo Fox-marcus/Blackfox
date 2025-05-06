@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us - FOX HACKER</title>
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="file:///C:/Users/Dell/Downloads/moon-seen-phase-with-sepia-style-effect.jpg">
+<!-- External CSS -->
+<link rel="stylesheet" href="body.css" />
+
+<style>
+  /* Reset and base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(244, 244, 244, 0.8); /* Slightly transparent background */
+    background-image: url('african-american-schoolgirl-writing-class-notes-laptop-library.jpg'); /* Background image */
+    background-size: cover; /* Cover entire body */
+    background-position: center; /* Center the image */
+    color: #333;
+  }
+
+  /* Header styles */
+  header {
+    width: 100%;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+
+  /* Banner scrolling section */
+  .banner-container {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+
+  .banner {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll-left 50s linear infinite;
+  }
+
+  .banner img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            z-index: 2;
+        }
+
+        .category {
+            margin: 0 15px;
+            padding: 10px;
+            background-color: #e7e7e7;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .courses {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .course-item {
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .course-details {
+            display: none;
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+         /* Footer styles */
+    footer {
+      background-color: #fff;
+      padding: 16px;
+      margin-top: 594px;
+      text-align: center;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <img src="web-header.jpg" class="header-img" alt="Website Header">
+
+    <nav>
+        <ul>
+  <a href="index.html"><b>HOME</b></a>
+  <a href="about.html"><b>ABOUT US</b></a>
+  <a href="service.html"><b>PROGRAM</b></a>
+  <a href="location.html"><b>CONTACT US</b></a>
+  <a href="help.html"><b>REGISTRATION</b></a>
+    </nav>
+
+    <div class="categories">
+        <div class="category" onclick="toggleCourses('certificates')">
+            <a href="javascript:void(0)">Certificate Programs</a>
+        </div>
+        <div class="category" onclick="toggleCourses('diplomas')">
+            <a href="javascript:void(0)">Diploma Programs</a>
+        </div>
+        <div class="category" onclick="toggleCourses('degrees')">
+            <a href="javascript:void(0)">Degree Programs</a>
+        </div>
+    </div>
+
+    <div id="certificates" class="courses">
+        <div class="course-item" onclick="showDetails('cert-IT')">Information Technology</div>
+        <div id="cert-IT" class="course-details">
+            <p><strong>Details:</strong>This qualification is intended to provide the basics of computers and train students to become basic technicians in information technology.</p>
+            <p><strong>Qualifications:</strong><br>Direct Entry: Holders of Certificate of Secondary Education Examination (CSEE) with four (4) D passes and above in non-religious subjects. One of the Passes should include either Physics or Chemistry or Mathematics </p>
+        </div>
+        <div class="course-item" onclick="showDetails('cert-BA')">Business Administration</div>
+        <div id="cert-BA" class="course-details">
+             <p><strong>Details:</strong>The Business Administration Certificate Program is designed to help professionals develop expertise and competency in the critical functions of business. A candidate shall be deemed eligible for consideration for admission to the Basic Technician Certificate in Business Administration Programme of the Open University of Tanzania if he/she has obtained: Certificate of Secondary Education with at least four (4) passes including mathematics. OR National Vocational Award (NVA Level 3) in any field from an institution recognized by VETA..</p>
+            <p><strong>Qualifications:</strong>Certificate of Secondary Education with at least four (4) passes including mathematics. OR National Vocational Award (NVA Level 3) in any field from an institution recognized by VETA.</p>
+        </div>
+        <div class="course-item" onclick="showDetails('cert-HRM')">Accounting</div>
+        <div id="cert-HRM" class="course-details">
+            <p><strong>Details:</strong> The philosophy behind the development of this programme is focused on developing professionals with the ability to perform routine tasks in organised groups taking into account environmental and safety issues, applying elementary and accounting skills in performing routine tasks..</p>
+            <p><strong>Qualifications:</strong>A Form four certificate with at least four passes (excluding religious subjects). For BTCC & IT, one of the four passes must be in Mathematics, Physics or Chemistry..</p>
+        </div>
+    </div>
+
+    <div id="diplomas" class="courses">
+        <div class="course-item" onclick="showDetails('diploma-IT')">Diploma in Information technology</div>
+        <div id="diploma-IT" class="course-details">
+            <p><strong>Details:</strong>This programme has been designed to produce graduates who will satisfy the needs of employers as well as self-employment in the 21st century and are ready to enter information and communication technology employment and are equipped to continue learning throughout their life.
+<br>
+The graduates from this programme will be flexible and able to meet information and communication technology challenges of the job market or industry. The programme also addresses national needs articulated through various Higher and Technical Education Policies.
+<br>
+It is, therefore, expected that the graduates from this programme will have aspirations to become professional technician. As such they will likely take roles involving high level managerial and organisational responsibility and be expected to provide leadership over a broad range of engineering activities. Skills required for such roles will be acquired from Management and Entrepreneurship subjects. The programme also contains coherent core of mathematics, sciences, economics and communication skills which provide a viable foundation for further studies and lifelong learning.
+
+
+.</p>
+            <p><strong>Qualifications:</strong> Possession of Certificate of Secondary Education Examination (CSEE) with a pass in at least four (4) non-Religious subjects,   two   of which   must be Mathematics and English.
+<br
+OR
+<br>
+Possession  of  Certificate  of  Secondary  Education  Examination  (CSEE)  from  Technical Secondary  Schools with a pass in at least four (4) non-Religious subjects, two of which must be Mathematics and English and any two of the following subjects: Engineering Science/Chemistry, Architectural Drafting/Building Construction, Electrical  Engineering Science/Electrical Drafting, Workshop Technology/Mechanical Drafting.
+<br>
+OR
+<br>
+Possession  of Certificate of Secondary  Education  Examination (CSEE) with a pass in at least four (4)  non-Religious  subjects,  two  must  be  among  the  following  subjects: Mathematics ,Physics, Chemistry, English   with possession  of TRADE TEST GRADE  I / NVA LEVEL III issued by VETA.
+
+.</p>
+        </div>
+        <div class="course-item" onclick="showDetails('diploma-BA')">Diploma in Business administration</div>
+        <div id="diploma-BA" class="course-details">
+            <p><strong>Details:</strong>The  aim  of Diploma in Business Administration programme  is  to  produce  competitive  graduate  equipped with managerial and administrative knowledge and skills to work in firms, industries and other business related arena. The program provides features which enable a graduate to handle business challenges hence handling business environment dynamics, the ability which allows the graduate to undergo self realization in business administration and management matters.
+
+
+ </p>
+            <p><strong>Qualifications:</strong> Possession of Certificate in business Administration and other related qualifications including Certificate in agriculture, Community Development.
+<br>
+OR
+<br>
+Possession  of a Advanced Certificates for Secondary Education with at least 1 principal pass and 1 subsidiary
+<br>
+OR
+<br>
+Possession of Certificate of NVA level 3, ATEC I (NBAA) Foundation stage I (PSPTB/NBMM).
+
+</p>
+        </div>
+        <div class="course-item" onclick="showDetails('diploma-HRM')">Diploma in Computer engineering</div>
+        <div id="diploma-HRM" class="course-details">
+            <p><strong>Details:</strong><br> 
+This programme has been designed to produce graduates who will satisfy the needs of employers as well as self-employment in the 21st century and are ready to enter computer engineering employment and are equipped to continue learning throughout their life.
+<br>
+The graduates from this programme will be flexible and able to meet computer engineering challenges of the job market or industry. The programme also addresses national needs articulated through various Higher and Technical Education Policies.
+<br>
+It is, therefore, expected that the graduates from this programme will have aspirations to become professional technician. As such they will likely take roles involving high level managerial and organisational responsibility and be expected to provide leadership over a broad range of engineering activities. Skills required for such roles will be acquired from Management and Entrepreneurship subjects. The programme also contains coherent core of mathematics, engineering sciences, engineering economics and communication skills which provide a viable foundation for further studies and lifelong learning.
+
+
+</p>
+            <p><strong>Qualifications:</strong> Possession of Certificate of Secondary Education Examination (CSEE) with a pass in at least four (4) non-Religious subjects,   three   of which   must be Mathematics, Physics, Chemistry
+<br>
+OR
+<br>
+Possession  of  Certificate  of  Secondary  Education  Examination  (CSEE)  from  Technical Secondary  Schools with a pass in at least four (4) non-Religious subjects, three of which must be Mathematics, Engineering Science, Chemistry and any one of the following subjects: Architectural Drafting/Building Construction, Electrical  Engineering Science/Electrical Drafting, Workshop Technology/Mechanical Drafting.
+<br>
+OR
+<br>
+Possession  of Certificate of Secondary  Education  Examination (CSEE) with a pass in at least four (4)  non-Religious  subjects,  two  must  be  among  the  following  subjects: Physics, Chemistry and Mathematics with possession  of TRADE TEST GRADE  I / NVA LEVEL III issued by VETA.
+
+
+.</p>
+        </div>
+    </div>
+
+    <div id="degrees" class="courses">
+        <div class="course-item" onclick="showDetails('degree-IT')">Bachelor of Science in Information technology</div>
+        <div id="degree-IT" class="course-details">
+            <p><strong>Details:</strong> This programme has been designed to produce graduates who will satisfy the needs of employers as well as self-employment in the 21st century and are ready to enter information technology employment and are equipped to continue learning throughout their life.
+<br><br>
+The graduates from this programme will be flexible and able to meet information technology challenges of the job market or industry. The programme also addresses national needs articulated through various Higher and Technical Education Policies.
+<br>
+<br>
+It is, therefore, expected that the graduates from this programme will have aspirations to become professional technologist. As such they will likely take roles involving high level managerial and organisational responsibility and be expected to provide leadership over a broad range of information technology activities. Skills required for such roles will be acquired from Management and Entrepreneurship subjects. The programme also contains coherent core of mathematics, sciences, economics and communication skills which provide a viable foundation for further studies and lifelong learning..</p>
+            <p><strong>Qualifications:</strong> Two Principal passes in the following subjects: Physics, Advanced Mathematics, Geography, Biology, Chemistry and Economics. Also must have a Certificate of Secondary Education Examination (CSEE) with a minimum pass of “D” grade in at least four (4) non-Religious subjects,   two   of which   must be Mathematics and English
+<br>
+OR
+<br>
+Diploma or Full Technician Certificate (FTC) in Computer Engineering, Computer Science, Electrical and Electronics, Information and Communication Technology (ICT), or Mechatronics Engineering with an average of “C’’ or a minimum GPA of 3.0. In addition, an applicant must have a minimum of “D” grade in Mathematics and English at O-Level.
+<br>
+OR
+<br>
+Two principal passes of at least “B” grade in Mathematics and Physics and minimum GPA of 3.0 in the Foundation Course and must have a Certificate of Secondary Education Examination (CSEE) with a pass in at least four (4) non-Religious subjects,   two   of which   must be Mathematics and English
+
+.</p>
+        </div>
+        <div class="course-item" onclick="showDetails('degree-BA')">Bachelor of Business Administration</div>
+        <div id="degree-BA" class="course-details">
+            <p><strong>Details:</strong>The philosophy  behind  the  development  of  this  programme (BBA)  is  geared  towards producing  innovative,  creative  and  flexible  graduates who can apply modern technologies and scientific principles to improve business performance in both public and private sectors or self-established firms.   It  is  expected  that  graduates  from  this  programme  will  take  roles  involving  high  level managerial and organizational responsibility, and provide leadership over a broad range of business disciplines.
+
+
+.</p>
+            <p><strong>Qualifications:</strong><br> Form Six holders
+<br>
+Any Two principal passes  of at least “D” grade at Advanced Level  including subsidiary in Mathematics at A Level and  must have a Certificate of Secondary Education Examination (CSEE) with a minimum pass of “D” grade in at least four (4) non-Religious subjects
+
+       <br>                                         OR
+<br>
+Diploma Holders
+<br>
+Diploma (NTA Level 6) in Business Management,  Business Administration, Education, Engineering, Law, Accountancy, Marketing with an average  of ‘B’ or GPA of  3.0 excluding  Diploma in Religious Studies (Bible Knowledge or Islamic Studies)
+
+.</p>
+        </div>
+        <div class="course-item" onclick="showDetails('degree-HRM')">Bachelor of computer science</div>
+        <div id="degree-HRM" class="course-details">
+            <p><strong>Details:</strong>This programme has been designed to produce graduates who will satisfy the needs of employers and self-employment in the 21st century, are ready to enter computer science employment, and are equipped to continue learning throughout their life.
+<br>
+The graduates from this programme will be flexible and able to meet computer science challenges of the job market or industry. The programme also addresses national needs articulated through various Higher and Technical Education Policies.
+<br>
+It is, therefore, expected that the graduates from this programme will have aspirations to become professional engineers. As such, they will likely take roles involving high-level managerial and organisational responsibility and be expected to provide leadership over a broad range of computer science activities.<br> Skills required for such roles will be acquired from Management and Entrepreneurship subjects. The programme also contains a coherent core of mathematics, sciences, economics and communication skills, providing a viable foundation for further studies and lifelong learning. </p>
+            <p><strong>Qualifications:</strong>  Two principal passes in Advanced Mathematics and Physics or Chemistry. Also must have a Certificate of Secondary Education Examination (CSEE) with a minimum pass of “D” grade in at least four (4) non-Religious subjects,   two   of which   must be Mathematics and English
+<br>
+OR
+<br>
+Diploma or Full Technician Certificate (FTC) in Computer Engineering, Computer Science, Software Engineering, Telecomunication Engineering, Information and Communication Technology (ICT) with an average of “C’’ or a minimum GPA of 3.0. In addition, an applicant must have a minimum of “D” grade in Mathematics and English
+<br>
+OR
+<br>
+Two principal passes of at least “B” grade in Mathematics and Physics and minimum GPA of 3.0 in the Foundation Course and must have a Certificate of Secondary Education Examination (CSEE) with a pass in at least four (4) non-Religious subjects,   two   of which   must be Mathematics and English
+
+</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleCourses(category) {
+            const courses = document.querySelectorAll('.courses');
+            courses.forEach(course => {
+                if (course.id === category) {
+                    course.style.display = course.style.display === 'block' ? 'none' : 'block';
+                } else {
+                    course.style.display = 'none';
+                }
+            });
+        }
+
+        function showDetails(courseId) {
+            const details = document.querySelectorAll('.course-details');
+            details.forEach(detail => {
+                detail.style.display = 'none'; // Hide all details first
+            });
+            const selectedDetail = document.getElementById(courseId);
+            selectedDetail.style.display = selectedDetail.style.display === 'block' ? 'none' : 'block'; // Toggle selected detail
+        }
+    </script>
+    <footer>
+        <p>&copy; 2025 SAUT UNIVERSITY. All Rights Reserved.</p>
+      </footer>
+</body>
+</html>

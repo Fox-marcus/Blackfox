@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us - FOX HACKER</title>
+
+<link rel="icon" type="image/x-icon" href="file:///C:/Users/Dell/Downloads/moon-seen-phase-with-sepia-style-effect.jpg">
+
+<link rel="stylesheet" href="body.css" />
+
+<style>
+ 
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(244, 244, 244, 0.8); 
+    background-image: url('phone.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: #333;
+  }
+
+
+  header {
+    width: 100%;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+
+
+  .banner-container {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+
+  .banner {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll-left 50s linear infinite;
+  }
+
+  .banner img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+
+  main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+
+
+  .contact-section {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  h2.cont {
+    margin-top: 0;
+    color: #222;
+  }
+
+  p {
+    margin: 15px 0;
+  }
+
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    margin-top: 495px;
+  }
+ 
+  @media(max-width: 768px){
+    nav {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="web-header.jpg" alt="Header Image" />
+</header>
+
+
+<nav>
+  <a href="index.html"><b>HOME</b></a>
+  <a href="about.html"><b>ABOUT US</b></a>
+  <a href="service.html"><b>PROGRAM</b></a>
+  <a href="location.html"><b>CONTACT US</b></a>
+  <a href="help.html"><b>REGISTRATION</b></a>
+</nav>
+
+
+<main>
+  <section class="contact-section">
+    <h2 class="cont">Contact Us</h2>
+    <p>For any information or assistance you may need on Saint Augustine University of Tanzania (SAUT), please contact us at the address below. We look forward to hearing from you.</p>
+    <p><strong>Note:</strong> Our feedback will be given to you promptly.</p>
+    <p><strong>GENERAL ENQUIRIES:</strong></p>
+    <ul>
+      <li>Service Hours: 8:00 am to 4:30 pm</li>
+      <li>Nyegezi, Malimbe</li>
+      <li>P.O. Box 307, Mwanza</li>
+      <li><a href="https://saut.ac.tz/" target="_blank" rel="noopener noreferrer">sautmalimbe@saut.ac.tz</a></li>
+    </ul>
+    <p><strong>For mobile:</strong> (+255) 715 915 005</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 SAUT UNIVERSITY. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Register - FOX HACKER</title>
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="file:///C:/Users/Dell/Downloads/moon-seen-phase-with-sepia-style-effect.jpg">
+<!-- External CSS -->
+<link rel="stylesheet" href="body.css" />
+
+<style>
+  /* Reset and base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(244, 244, 244, 0.8);
+    background-image: url('pen.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+  }
+
+  /* Header styles */
+  header {
+    width: 100%;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+
+  /* Main content styles */
+  main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+
+  /* Registration form styles */
+  .registration-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    margin-top: 0;
+    color: #222;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #005bb5;
+  }
+  footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: black;
+  }
+  
+  /* Responsive styles */
+  @media(max-width: 768px){
+    nav {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="web-header.jpg" alt="Header Image" />
+</header>
+
+<nav>
+  <a href="index.html"><b>HOME</b></a>
+  <a href="about.html"><b>ABOUT US</b></a>
+  <a href="service.html"><b>PROGRAM</b></a>
+  <a href="location.html"><b>CONTACT US</b></a>
+  <a href="help.html"><b>REGISTRATION</b></a>
+</nav>
+
+<main>
+  <div class="registration-form">
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="return submitForm(event)">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <label for="role">Role:</label>
+      <select id="role" name="role" required>
+        <option value="">Select your role</option>
+        <option value="student">Student</option>
+        <option value="instructor">Instructor</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <label for="level">Select Level of Study:</label>
+      <select id="level" name="level" required>
+        <option value="">Select a level</option>
+        <option value="certificate">Certificate</option>
+        <option value="diploma">Diploma</option>
+        <option value="degree">Degree</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</main>
+
+<!-- The Modal -->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Registration Successful!</h2>
+    <p>Thank you for registering with SAUT UNIVERSITY</p>
+    <p>Your registration details have been submitted successfully.</p>
+    <button onclick="closeModal()" style="margin-top: 20px;">OK</button>
+  </div>
+</div>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    // Get form data
+    const form = document.getElementById('registrationForm');
+    const formData = new FormData(form);
+    
+    // Validate passwords match
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return false;
+    }
+    
+    // Here you would normally send the data to your server
+    // For demonstration, we'll just show the success message
+    
+    // Show success modal
+    document.getElementById('successModal').style.display = 'block';
+    
+    // Send form data to email (this requires server-side code)
+    // For this to actually work, you need a server-side script
+    sendFormDataToEmail(formData);
+    
+    // Reset form
+    form.reset();
+    
+    return false;
+  }
+  
+  function closeModal() {
+    document.getElementById('successModal').style.display = 'none';
+  }
+  
+  // Function to simulate sending data to email (this won't actually work without server-side code)
+  function sendFormDataToEmail(formData) {
+    // In a real implementation, you would use AJAX to send the data to a server-side script
+    // Here's an example of what that might look like:
+    /*
+    fetch('send_email.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+    */
+    
+    // For demonstration, we'll just log the data
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+    console.log("Form data that would be sent to email:", data);
+    
+    // In a real implementation, you would need:
+    // 1. A server-side script (PHP, Node.js, etc.) to handle the email sending
+    // 2. Proper email service configuration
+  }
+  
+  // Close modal if clicked outside of it
+  window.onclick = function(event) {
+    const modal = document.getElementById('successModal');
+    if (event.target == modal) {
+      closeModal();
+    }
+  }
+</script>
+
+<footer>
+  <p>&copy; 2025 SAUT UNIVERSITY. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

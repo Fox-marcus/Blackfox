@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FOX HACKER</title>
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="body.css" />
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="file:///C:/Users/Dell/Downloads/moon-seen-phase-with-sepia-style-effect.jpg" />
+
+<style>
+  /* Reset and base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  /* Header styles */
+  header {
+    width: 100%;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+    display:block;
+    object-fit: cover;
+  }
+
+  /* Navigation bar */
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+
+    nav a:hover {
+      background-color: #ddd;
+      border-radius: 4px;
+    }
+
+    /* Digital Clock Styles */
+    .clock {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* Banner Animation */
+    .banner-container {
+      overflow: hidden;
+      position: relative;
+      height: 350px;
+      width: 100%;
+    }
+
+    .banner {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll-left 50s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Main Content Layout */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    /* Sections style, each as flex items */
+    section {
+      flex: 1 1 300px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Leader Profile */
+    .leader img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Headings with icons */
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 0;
+    }
+
+    /* Icons and images in sections */
+    .icon {
+      width: 40px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    /* List styles for collaborations */
+    .collab-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .collab-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .collab-list img {
+      margin-right: 10px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+      text-align: center;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="web-header.jpg" alt="Header Image" />
+  </header>
+
+  <nav>
+    <a href="index.html"><b>HOME</b></a>
+  <a href="about.html"><b>ABOUT US</b></a>
+  <a href="service.html"><b>PROGRAM</b></a>
+  <a href="location.html"><b>CONTACT US</b></a>
+  <a href="help.html"><b>REGISTRATION</b></a>
+  </nav>
+
+  <!-- Digital Clock -->
+  <div class="clock" id="digitalClock"></div>
+ 
+
+  <!-- Scrolling banner -->
+  <div class="banner-container">
+    <div class="banner">
+      <img src="scroll.jpg" alt="Scrolling Image" />
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Leader Profile -->
+    <section class="leader">
+      <h2>LEADER</h2>
+      <img src="Prof Costa Ricky Mahalu.jpg" alt="Professor Costa Ricky Mahalu" />
+    </section>
+
+    <!-- News & Events -->
+    <section id="news">
+      <h2>
+        NEWS & EVENTS
+        <img src="new.gif" alt="News Icon" class="icon" />
+      </h2>
+      <hr />
+      <ol>
+        <li><a href="Documents/20252403571339TANGAZO%20LA%20KAZI%20KYERWA%20DC.pdf" target="_blank" rel="noopener noreferrer">EMPLOYMENT OPPORTUNITIES</a></li>
+        <li><a href="Music/GRADUANDS%202023-2024%20FINAL%20UPDATED.pdf" target="_blank" rel="noopener noreferrer">GRADUANDS 2023-2024 FINAL UPDATE</a></li>
+        <li><a href="Music/27th%20Graduation%20Ceremony%20Notice%202024.pdf" target="_blank" rel="noopener noreferrer">27TH GRADUATION CEREMONY NOTICE 2024</a></li>
+        <li><a href="Music/Newsletter-%20Prof.%20Lyimo%20Elected%20Director%20General.pdf" target="_blank" rel="noopener noreferrer">NEWSLETTER - PROF. LYMO ELECTED DIRECTOR GENERAL</a></li>
+      </ol>
+    </section>
+
+    <!-- Links -->
+    <section id="links">
+      <h2>OTHER LINKS</h2>
+      <hr />
+      <ol>
+        <li><a href="http://www.nacte.go.tz" target="_blank" rel="noopener noreferrer">NACTEVET</a></li>
+        <li><a href="http://www.tcu.go.tz" target="_blank" rel="noopener noreferrer">TCU</a></li>
+        <li><a href="http://www.heslb.go.tz" target="_blank" rel="noopener noreferrer">HESLB</a></li>
+        <li><a href="https://www.necta.go.tz" target="_blank" rel="noopener noreferrer">NECTA</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- International Collaborations -->
+  <section class="collaborations" style="margin-top: 40px;">
+    <h2>International Collaborations</h2>
+    <p>SAUT collaborates with other universities internationally in academic and research activities including student and staff exchange programs.</p>
+    <ul class="collab-list">
+      <li><img src="finlans.png" alt="Portugal Flag" class="icon" /> Portugal</li>
+      <li><img src="south africa.png" alt="South Africa Flag" class="icon" /> South Africa</li>
+      <li><img src="german.png" alt="Germany Flag" class="icon" /> Germany</li>
+      <li><img src="japan.png" alt="Japan Flag" class="icon" /> Japan</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SAUT UNIVERSITY. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('digitalClock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call
+   
+  </script>
+
+</body>
+</html>
